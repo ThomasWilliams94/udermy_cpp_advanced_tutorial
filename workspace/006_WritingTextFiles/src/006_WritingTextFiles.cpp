@@ -12,7 +12,7 @@ using namespace std;
 
 int main() {
 
-	const char *outputFileName = "text.txt";
+	const char *outputFileName = "output/text.txt";
 
 	//ofstream outFile;
 	//outFile.open(outputFileName);
