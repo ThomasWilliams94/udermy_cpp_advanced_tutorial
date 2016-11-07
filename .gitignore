@@ -32,4 +32,6 @@ workspace/.metadata*/
 
 .settings/
 
+output/
+
 workspace/*/.gitignore
