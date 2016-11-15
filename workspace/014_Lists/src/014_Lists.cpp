@@ -63,7 +63,8 @@ int main() {
 		cout << *it << endl;
 	}
 
-	for (list<int>::iterator it = numbers.begin(); it != numbers.end();) {
+	while (it != numbers.end()) {
+
 		if (*it == 2) {
 			numbers.insert(it, 1234);
 		}
@@ -73,6 +74,7 @@ int main() {
 		} else {
 			it++;
 		}
+
 	}
 
 	cout << endl;
