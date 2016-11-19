@@ -9,9 +9,20 @@
 
 namespace tjw {
 
-Card::Card() {
-	// TODO Auto-generated constructor stub
+Card::Card(Rank rank, Suit suit) {
+	this->rank = rank;
+	this->suit = suit;
 
+	if (suit == Diamonds || suit == Hearts) {
+		colour = Red;
+	} else {
+		colour = Black;
+	}
+
+}
+
+void Card::print() {
+	cout << rank << " of " << suit << endl;
 }
 
 Card::~Card() {

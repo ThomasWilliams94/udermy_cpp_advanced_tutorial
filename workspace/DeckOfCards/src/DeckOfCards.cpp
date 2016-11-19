@@ -7,9 +7,14 @@
 //============================================================================
 
 #include <iostream>
+#include "Card.h"
 using namespace std;
 
 int main() {
-	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
+
+	tjw::Card testCard(tjw::Card::Ace, tjw::Card::Spades);
+
+	testCard.print();
+
 	return 0;
 }
