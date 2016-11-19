@@ -12,9 +12,5 @@ using namespace std;
 
 int main() {
 
-	tjw::Card testCard(tjw::Card::Ace, tjw::Card::Spades);
-
-	testCard.print();
-
 	return 0;
 }
