@@ -8,7 +8,6 @@
 #ifndef CARD_H_
 #define CARD_H_
 
-
 #include <iostream>
 
 using namespace std;
@@ -19,42 +18,21 @@ class Card {
 private:
 
 public:
-	enum Suit {
-		Diamonds, Hearts, Clubs, Spades
-	};
-	enum Colour {
-		Black, Red
-	};
-	enum Rank {
-		Ace = 1,
-		Two,
-		Three,
-		Four,
-		Five,
-		Six,
-		Seven,
-		Eight,
-		Nine,
-		Ten,
-		Jack,
-		Queen,
-		King
-	};
 
-	Suit suit;
-	Rank rank;
-	Colour colour;
+	CardProperties::Suit suit;
+	CardProperties::Rank rank;
+	CardProperties::Colour colour;
 
 public:
-	Card(Rank rank, Suit suit);
+	Card(CardProperties::Rank rank, CardProperties::Suit suit);
 
 	void print();
 
 	virtual ~Card();
 
-	friend ostream &operator<<(ostream &lhs, const Card::Rank &rank);
-	friend ostream &operator<<(ostream &lhs, const Card::Suit &suit);
-	friend ostream &operator<<(ostream &lhs, const Card::Colour &colour);
+	friend ostream &operator<<(ostream &lhs, const CardProperties::Rank &rank);
+	friend ostream &operator<<(ostream &lhs, const CardProperties::Suit &suit);
+	friend ostream &operator<<(ostream &lhs, const CardProperties::Colour &colour);
 };
 
 } /* namespace tjw */
