@@ -11,7 +11,16 @@ using namespace std;
 
 template<class T>
 void print(T n) {
-	cout << n << endl;
+	cout << "Template version: " << n << endl;
+}
+
+void print(int value) {
+	cout << "Non-template version: " << value << endl;
+}
+
+template<class T>
+void show() {
+	cout << "Second template version: " << T() << endl;
 }
 
 int main() {
@@ -22,6 +31,13 @@ int main() {
 
 
 	print("He there");
+
+	print(10);
+	print<>(10);
+
+	show<int>();
+	show<string>();
+	show<double>();
 
 	return 0;
 }
